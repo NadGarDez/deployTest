@@ -1,6 +1,6 @@
 name: deploy to github pages
 on:
- push:
+  push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
