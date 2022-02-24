@@ -6,11 +6,11 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    run-on: ubuntu-latest
+  build_project:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-    - name: Deploy react app to github pages
-      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
+      - name: Deploy react app to github pages
+        uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
