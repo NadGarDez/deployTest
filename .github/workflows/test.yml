@@ -10,4 +10,6 @@ jobs:
         name : import proyect
       - run : "echo hola"
       - run : "node -v"
+      - run : "npm run prettier"
+      - run : "npm run eslint"
  
