@@ -7,10 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         name : import proyect
-  run-test:
-    runs-on: ubuntu-latest
-    steps: 
-      - run: npm install
-      - run: npm run prettier
-      - run: npm run eslint
-      - name: run test prettier and eslint
+      - run : "echo hola"
+ 
