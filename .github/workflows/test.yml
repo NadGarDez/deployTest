@@ -8,10 +8,11 @@ jobs:
       - uses: actions/checkout@v2
         name : import proyect
   run-test:
+    runs-on: ubuntu-latest
     steps: 
-      run: |
+      - run: |
           npm install
           npm run prettier
           npm run eslint
 
-      name: run test prettier and eslint
+      - name: run test prettier and eslint
