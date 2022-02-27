@@ -1,16 +1,14 @@
-name: review dog
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+name: reviewdog
+on: [pull_request]
 jobs:
-  some:
+  stylelint:
+    name: runner / stylelint
     runs-on: ubuntu-latest
-
     steps:
-    - uses: reviewdog/action-setup@v1
-      with:
-        reviewdog_version: nightly
-    - run: reviewdog -version
+      - uses: actions/checkout@v1
+      - name: stylelint
+        uses: reviewdog/action-stylelint@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review # Change reporter.
+          stylelint_input: '**/*.css'
