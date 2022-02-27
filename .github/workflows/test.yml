@@ -2,12 +2,12 @@ name: test-prettier-eslint
 on: [push]
 
 jobs:
-  run-prettier-and-eslint:
+  import:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name : import proyect
-
+  run-test:
     steps: 
       run: |
           npm install
