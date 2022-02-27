@@ -1,9 +1,14 @@
-import React from 'react';
-import {Box, AppBar, Toolbar, IconButton, Paper, Typography} from '@mui/material'
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
-
-
+import React from "react";
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  IconButton,
+  Paper,
+  Typography,
+} from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import AccountCircle from "@mui/icons-material/AccountCircle";
 
 /*
 import React, { lazy, Suspense, useState } from 'react';
@@ -80,24 +85,26 @@ function App() {
   */
 
   return (
-    <Box sx={{flexGrow:1}}>
-
+    <Box sx={{ flexGrow: 1 }}>
       <AppBar>
         <Toolbar>
-        <IconButton
+          <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
-             <MenuIcon />
+            <MenuIcon />
           </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Adrian Site
-        </Typography>
-        <Box flexDirection="column" alignItems="center" justifyContent="center">
-            
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Adrian Site
+          </Typography>
+          <Box
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
             <IconButton
               size="large"
               edge="start"
@@ -105,31 +112,42 @@ function App() {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-              <AccountCircle/>
+              <AccountCircle />
             </IconButton>
-            
-        </Box>
+          </Box>
         </Toolbar>
       </AppBar>
       <Toolbar />
 
-      <Box  sx={{flexGrow:1, height:'100%', padding:5, display:'flex', alignItems:'center', justifyContent:'center'}}>
-
-        <Paper elevation={3} justifyContent="center" alignItems="center" sx={{width:'100%', padding:5}}>
-          <Box sx={{display:'flex',justifyContent:'center', alignItems:'center'}}>
-
-          <Typography variant="h2">Este es mi sitio</Typography>
+      <Box
+        sx={{
+          flexGrow: 1,
+          height: "100%",
+          padding: 5,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Paper
+          elevation={3}
+          justifyContent="center"
+          alignItems="center"
+          sx={{ width: "100%", padding: 5 }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Typography variant="h2">Este es mi sitio</Typography>
           </Box>
-
-          
-
         </Paper>
-
       </Box>
-
-
     </Box>
-  )
+  );
 }
 
 export default App;

@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 // import { useContext } from 'react/cjs/react.development';
-import { ColorContext } from './contexts/colorContex';
+import { ColorContext } from "./contexts/colorContex";
 /*
 const Component = ({toogle})=>{
     const {backgroundColor,color} = useContext(ColorContext);
@@ -12,25 +12,29 @@ const Component = ({toogle})=>{
 }
 */
 
-
 class MyClass extends React.Component {
-    constructor(props){
-        super(props);
-        setTimeout(() => {
-            props.toogle('light');
-        }, 5000);
-    }
+  constructor(props) {
+    super(props);
+    setTimeout(() => {
+      props.toogle("light");
+    }, 5000);
+  }
 
-    static contextType = ColorContext;
+  static contextType = ColorContext;
 
-    render(){
-        const {background,color} = this.context.theme;
-        return(
-        <div style={{height:80, width:'100%', backgroundColor:background.principal}}>
-            <p style={{color:color.principal}}>lazy 2</p>
-        </div>
-        );
-    }
-
+  render() {
+    const { background, color } = this.context.theme;
+    return (
+      <div
+        style={{
+          height: 80,
+          width: "100%",
+          backgroundColor: background.principal,
+        }}
+      >
+        <p style={{ color: color.principal }}>lazy 2</p>
+      </div>
+    );
+  }
 }
 export default MyClass;
