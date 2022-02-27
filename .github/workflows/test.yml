@@ -5,7 +5,6 @@ jobs:
   run-prettier-and-eslint:
     runs-on: ubuntu-latest
     steps:
-      - name: start prettier and eslint
       - uses: actions/checkout@v2
         run: |
           npm install
